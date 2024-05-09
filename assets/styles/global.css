@@ -8,7 +8,16 @@ h6 {
   font-family: "Montserrat", sans-serif;
   color: #262f5a;
 }
-
+.text-rose {
+  color: #f55f8d;
+}
+.icon-container:hover .text-rose {
+  color: #fff;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
 p {
   color: #262f5a;
 }

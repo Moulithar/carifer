@@ -114,20 +114,9 @@ li:before {
   margin-bottom: 12px;
 }
 
-footer li:before {
-  content: "\f054";
-  color: #fff;
-  font-size: 20px;
-  font-family: FontAwesome;
-  display: inline-block;
-  margin-left: calc(var(--icon-space) * -1);
-  width: var(--icon-space);
-  margin-bottom: 12px;
-}
-
 .about-img {
   border-radius: 0 25px 25px 0;
-  margin-block: 5rem;
+  margin-block: 2rem;
 }
 
 .badge {
@@ -187,6 +176,24 @@ footer li:before {
   justify-content: center;
   align-items: center;
 }
+.service-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8ae5633;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+}
+.service-card:hover .service-icon-container {
+  background-color: #f6d5dfa7;
+}
+.service-icon-bg .fa-solid {
+  color: #f55f8d;
+}
+.service-card:hover .fa-solid {
+  color: #fff;
+}
 
 .service-card {
   box-shadow: 0 0 10px 4px rgba(31, 66, 135, 0.1);
@@ -197,7 +204,9 @@ footer li:before {
   overflow: hidden;
   position: relative;
   z-index: 1;
+  color: #000;
 }
+
 .service-card::after {
   content: "";
   width: 250px;
@@ -212,7 +221,6 @@ footer li:before {
   border: 40px solid #f8ae56;
   opacity: 0.75;
   transition: all ease 0.5s;
-
   z-index: 0;
 }
 .service-card:hover::after {
@@ -220,14 +228,31 @@ footer li:before {
   bottom: 0%;
 }
 
+.service-card:hover p {
+  color: #fff;
+  position: relative;
+  z-index: 1;
+}
+.service-card:hover h5 {
+  color: #fff;
+}
+.service-card h5 {
+  font-weight: 600;
+}
 .service-card:hover {
-  background: linear-gradient(90deg, #ed1f5d 0, #f8ae56);
+  background: linear-gradient(90deg, #f55f8d 0, #f8ae56);
 }
 
 footer {
-  background-color: #0e1b1f;
+  /* background-color: #0e1b1f; */
+  color: #fff;
+  background-image: url("https://www.falconsqr.com/images/background/bg4.png"),
+    black;
+  background-color: black;
+  background-blend-mode: multiply;
 }
-footer::after {
+
+/* footer::after {
   content: "";
   background-image: url("https://www.falconsqr.com/images/background/bg4.png");
   background-position: 0 0;
@@ -236,4 +261,64 @@ footer::after {
   left: 0;
   width: 100%;
   height: 100%;
+} */
+footer h3 {
+  padding-top: 50px;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+  font-family: "Barlow Condensed", sans-serif;
+  color: #fff;
+  position: relative;
+}
+footer h3:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  border-radius: 20px;
+  background-color: #fff;
+  width: 15px;
+}
+footer h3:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  height: 4px;
+  border-radius: 20px;
+  background-color: #fff;
+  width: 43px;
+}
+
+footer li:before {
+  content: "\f054";
+  color: #fff;
+  font-size: 10px;
+  font-family: FontAwesome;
+  display: inline-block;
+  margin-left: calc(var(--icon-space) * -1);
+  width: var(--icon-space);
+  margin-bottom: 16px;
+  transition: all ease 0.3s;
+}
+footer li:hover:before {
+  margin-right: 7px;
+}
+footer li {
+  color: #fff;
+  font-size: 14px;
+  margin-bottom: 16px;
+  cursor: pointer;
+}
+
+footer p {
+  margin-left: 10px;
+  margin-bottom: 0px;
+  color: #fff;
+  transition: all ease 0.3s;
+  cursor: pointer;
+}
+footer p:hover {
+  margin-left: 20px;
 }
