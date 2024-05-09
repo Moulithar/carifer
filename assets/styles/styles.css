@@ -1,0 +1,239 @@
+.main-bg {
+  background: linear-gradient(90deg, #ed1f5d 0, #f8ae56);
+  /* background: linear-gradient(90deg, #f55f8d 0, #f8ae56); */
+}
+
+.carifer-nav {
+  position: sticky;
+  top: 0px;
+  z-index: 9999;
+}
+.sticky {
+  position: sticky;
+  top: 0px;
+  z-index: 999999;
+}
+
+.header {
+  border-bottom: 2px solid #fff;
+  position: relative;
+  z-index: 9999;
+}
+.banner-img {
+  border-radius: 50%;
+  position: absolute;
+  border-radius: 50%;
+  top: -100%;
+  right: -5%;
+  width: 700px;
+  height: 700px;
+  z-index: 1;
+  opacity: 0.7;
+}
+.icon-container {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f55f8d;
+  padding: 6px;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.icon-container:hover {
+  color: #fff;
+  background: linear-gradient(90deg, #ed1f5d 0, #f8ae56);
+}
+.hidden {
+  opacity: 0;
+}
+
+.large-button {
+  border: 2px solid transparent;
+  background: #fff;
+  transition: all ease 0.3s;
+  font-size: 16;
+  font-weight: 400;
+  padding: 10px 16px;
+  letter-spacing: 3px;
+  transition: all ease 0.5s;
+}
+
+.large-button:hover {
+  border: 2px solid #fff;
+  color: #fff;
+  background: linear-gradient(90deg, #ed1f5d 0, #f8ae56);
+}
+
+.menu-links {
+  cursor: pointer;
+  z-index: 9999;
+  position: relative;
+}
+
+.menu-links::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #fff;
+  transition: all ease 0.3s;
+}
+
+.menu-links:hover::after {
+  width: 100%;
+}
+
+.center {
+  width: 180px;
+  height: 60px;
+  position: absolute;
+}
+
+ul {
+  --icon-space: 1.3em;
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  padding-left: var(--icon-space);
+  font-size: 18px;
+}
+
+li:before {
+  content: "\f058";
+  color: #f55f8d;
+  font-size: 20px;
+  font-family: FontAwesome;
+  display: inline-block;
+  margin-left: calc(var(--icon-space) * -1);
+  width: var(--icon-space);
+  margin-bottom: 12px;
+}
+
+footer li:before {
+  content: "\f054";
+  color: #fff;
+  font-size: 20px;
+  font-family: FontAwesome;
+  display: inline-block;
+  margin-left: calc(var(--icon-space) * -1);
+  width: var(--icon-space);
+  margin-bottom: 12px;
+}
+
+.about-img {
+  border-radius: 0 25px 25px 0;
+  margin-block: 5rem;
+}
+
+.badge {
+  background-color: rgba(245, 95, 141, 0.1);
+  padding: 6px 16px;
+  font-size: 24px;
+  border-radius: 6px;
+  color: #f55f8d;
+  font-family: "Barlow Condensed", sans-serif;
+  letter-spacing: 2px;
+  width: fit-content;
+}
+
+.about-us {
+  background-image: url("https://www.falconsqr.com/images/background/bg15.png");
+  background-size: contain;
+  background-position: center right;
+  background-repeat: no-repeat;
+}
+
+.counter-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  cursor: default;
+  padding: 100px 0px;
+  color: #f55f8d;
+}
+
+.counter {
+  text-align: center;
+  transition: all ease 0.3s;
+}
+
+.counter:hover {
+  margin-top: -20px;
+}
+.counter h3 {
+  padding: 0.5rem 0;
+  font-size: 40px;
+  font-weight: 800;
+  color: #f55f8d;
+}
+.counter p {
+  padding: 0.5rem 0;
+  font-size: 20px;
+}
+
+.service-icon-bg {
+  background-image: url(../images/service-icon.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-card {
+  box-shadow: 0 0 10px 4px rgba(31, 66, 135, 0.1);
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  transition: all ease 0.5s;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+.service-card::after {
+  content: "";
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background-color: #ed1f5d;
+  position: absolute;
+  bottom: -35%;
+  right: -35%;
+  transform: translate(50%, 50%);
+  outline: 40px solid #feca8b;
+  border: 40px solid #f8ae56;
+  opacity: 0.75;
+  transition: all ease 0.5s;
+
+  z-index: 0;
+}
+.service-card:hover::after {
+  right: 0%;
+  bottom: 0%;
+}
+
+.service-card:hover {
+  background: linear-gradient(90deg, #ed1f5d 0, #f8ae56);
+}
+
+footer {
+  background-color: #0e1b1f;
+}
+footer::after {
+  content: "";
+  background-image: url("https://www.falconsqr.com/images/background/bg4.png");
+  background-position: 0 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
