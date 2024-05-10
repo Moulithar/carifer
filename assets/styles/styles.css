@@ -46,6 +46,9 @@
   color: #fff;
   background: linear-gradient(90deg, #ed1f5d 0, #f8ae56);
 }
+.icon-container:hover a i {
+  color: #fff !important;
+}
 .hidden {
   opacity: 0;
 }
@@ -111,7 +114,7 @@ li:before {
   display: inline-block;
   margin-left: calc(var(--icon-space) * -1);
   width: var(--icon-space);
-  margin-bottom: 12px;
+  /* margin-bottom: 12px; */
 }
 
 .about-img {
@@ -139,6 +142,7 @@ li:before {
 
 .counter-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
   cursor: default;
@@ -321,4 +325,33 @@ footer p {
 }
 footer p:hover {
   margin-left: 20px;
+}
+
+.logo {
+  font-weight: 600;
+  letter-spacing: 3px;
+  font-family: "Orbitron", sans-serif;
+  /* font-family: "Lalezar", system-ui; */
+}
+
+.logo span {
+  /* font-family: "Lalezar", system-ui; */
+  font-family: "Orbitron", sans-serif;
+
+  color: #000;
+  /* font-family: "Press Start 2P", system-ui; */
+  font-weight: 900;
+}
+
+.offcanvas-body .menu-links {
+  font-size: 20px;
+  font-weight: 600;
+  color: #ed1f5d;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #000;
+}
+
+.offcanvas-body .menu-links:last-child {
+  /* border-bottom: none; */
+  border-bottom: 2px solid #000;
 }

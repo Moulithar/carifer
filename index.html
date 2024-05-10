@@ -5,12 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Carifer</title>
     <link
+      rel="icon"
+      href="./assets//images/logo_carifer.png"
+      type="image/x-icon"
+    />
+    <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       integrity="sha384-..."
       crossorigin="anonymous"
     />
-
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -21,7 +25,7 @@
   </head>
 
   <body>
-    <nav class="container-fluid main-bg text-white" id="home">
+    <nav class="container-fluid main-bg text-white d-none d-lg-block">
       <div
         class="container p-2 d-flex align-items-center justify-content-between header"
       >
@@ -72,28 +76,115 @@
           class="container px-2 py-3 d-flex align-items-center justify-content-between"
         >
           <a href="#home" class="href">
-            <h2 class="text-white logo menu-links m-0">CARIFER</h2>
+            <h2 class="text-white logo m-0">C<span>A</span>RIFER</h2>
           </a>
+          <div class="d-none d-lg-block">
+            <div
+              class="d-flex gap-5 justify-content-center align-items-center text-white menu"
+            >
+              <a href="#home" class="href">
+                <div class="menu-links">HOME</div>
+              </a>
+              <a href="#about" class="href">
+                <div class="menu-links">ABOUT</div>
+              </a>
+              <a href="#services" class="href">
+                <div class="menu-links">SERVICES</div>
+              </a>
+              <a href="#contact" class="href">
+                <div class="menu-links">CONTACT</div>
+              </a>
+            </div>
+          </div>
+
           <div
-            class="d-flex gap-5 justify-content-center align-items-center text-white menu"
+            class="offcanvas offcanvas-end"
+            tabindex="-1"
+            id="offcanvasRight"
+            aria-labelledby="offcanvasRightLabel"
           >
-            <a href="#home" class="href">
-              <div class="menu-links">HOME</div>
-            </a>
-            <a href="#about" class="href">
-              <div class="menu-links">ABOUT</div>
-            </a>
-            <a href="#services" class="href">
-              <div class="menu-links">SERVICES</div>
-            </a>
-            <a href="#contact" class="href">
-              <div class="menu-links">CONTACT</div>
-            </a>
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasRightLabel">
+                <a href="#home" class="href">
+                  <h2 class="text-dark logo m-0">
+                    C<span class="text-rose">A</span>RIFER
+                  </h2>
+                </a>
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div
+              class="offcanvas-body d-flex flex-column justify-content-between"
+            >
+              <div>
+                <a href="#home" class="href">
+                  <div class="menu-links text-rose">HOME</div>
+                </a>
+                <a href="#about" class="href">
+                  <div class="menu-links text-rose">ABOUT</div>
+                </a>
+                <a href="#services" class="href">
+                  <div class="menu-links text-rose">SERVICES</div>
+                </a>
+                <a href="#contact" class="href">
+                  <div class="menu-links text-rose">CONTACT</div>
+                </a>
+              </div>
+              <div class="pb-5">
+                <div class="d-flex gap-3 align-items-center menu pt-3">
+                  <a href="mailto:support@carifer.com" class="text-rose">
+                    <i class="fa-solid fa-phone-volume fa-xl"></i>
+                  </a>
+
+                  <a href="mailto:support@carifer.com" class="text-rose">
+                    <i class="fa-regular fa-envelope fa-xl"></i>
+                  </a>
+
+                  <a
+                    href="https://www.facebook.com/carifertechnologies/ "
+                    class="text-rose"
+                  >
+                    <i class="fa-brands fa-facebook-f fa-xl"></i>
+                  </a>
+
+                  <a
+                    href="https://www.instagram.com/carifer_tech/"
+                    class="text-rose"
+                  >
+                    <i class="fa-brands fa-instagram fa-xl"></i>
+                  </a>
+
+                  <a
+                    href="https://www.linkedin.com/company/carifer-technologies-private-limited/?originalSubdomain=in"
+                    class="text-rose"
+                  >
+                    <i class="fa-brands fa-linkedin fa-xl"></i>
+                  </a>
+                </div>
+                <p class="mt-4 mb-0">96, Perundurai Main Road,</p>
+                <p class="mb-0">Near SBI Bank URC Nagar Branch,</p>
+                <p class="mb-0">Chinna Sengodampalayam, Erode,</p>
+                <p class="mb-4">Tamil Nadu – 638011.</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="d-block d-lg-none"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasRight"
+            aria-controls="offcanvasRight"
+          >
+            <i class="fa-solid fa-bars fa-2xl text-white"></i>
           </div>
         </div>
       </nav>
     </div>
-    <div class="container-fluid main-bg banner position-relative">
+    <div class="container-fluid main-bg banner position-relative" id="home">
       <div class="container">
         <div class="row">
           <div class="col-lg-6 py-5">
@@ -112,7 +203,7 @@
       <img
         src="./assets/images/banner-right.jpg"
         alt=""
-        class="banner-img"
+        class="banner-img d-none d-lg-block"
         id="nav-image"
       />
     </div>
@@ -133,7 +224,7 @@
               class="w-100 about-img h-75"
             />
           </div>
-          <div class="col-lg-6 px-5 about-us" id="about-us">
+          <div class="col-lg-6 px-4 about-us" id="about-us">
             <div class="badge mb-4">ABOUT US</div>
             <h2 class="fw-bold mb-4">Let Us Be Your Preferred IT Partner</h2>
             <p class="mb-4">
@@ -172,7 +263,7 @@
       </div>
     </section>
     <section id="counter">
-      <div class="container">
+      <div class="container d-lg-block d-none">
         <div class="counter-container">
           <div class="counter">
             <span class="d-flex align-items-center gap-2 justify-content-center"
@@ -214,9 +305,9 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-4">
-            <div class="badge mb-4 mx-auto">OUR SERVICES</div>
-            <h2 class="fw-bold my-4">"Boom your Business with this Boon"</h2>
-            <div class="service-card mt-5">
+            <div class="badge my-4 mx-auto">OUR SERVICES</div>
+            <h2 class="fw-bold mb-5">Boom your Business with this Boon</h2>
+            <div class="service-card my-4">
               <div class="service-icon-bg">
                 <div class="service-icon-container">
                   <i class="fa-solid fa-hand-holding-dollar fa-2xl"></i>
@@ -245,7 +336,7 @@
                 needs of a specific organisation.
               </p>
             </div>
-            <div class="service-card">
+            <div class="service-card mb-4">
               <div class="service-icon-bg">
                 <div class="service-icon-container">
                   <i class="fa-solid fa-computer fa-2xl"></i>
@@ -274,7 +365,7 @@
                 sales and marketing and oversee logistics and fulfilment.
               </p>
             </div>
-            <div class="service-card">
+            <div class="service-card mb-4">
               <div class="service-icon-bg">
                 <div class="service-icon-container">
                   <i class="fa-solid fa-mobile-screen fa-2xl"></i>
@@ -317,8 +408,13 @@
                 <p>+91 9176547897</p>
               </div>
             </a>
-            96, Perundurai Main Road, Near SBI Bank URC Nagar Branch, Chinna
-            Sengodampalayam, Erode, Tamil Nadu – 638011.
+            96, Perundurai Main Road,
+            <br />
+            Near SBI Bank URC Nagar Branch,
+            <br />
+            Chinna Sengodampalayam, Erode,
+            <br />
+            Tamil Nadu – 638011.
           </div>
           <div class="col-lg-2">
             <h3>Our Links</h3>
@@ -371,12 +467,15 @@
       </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.x/dist/js/bootstrap.bundle.min.js"></script>
     <script>
       const counters = document.querySelectorAll(".count");
       const counterContainer = document.querySelector(".counter-container");
 
+      // Define the total duration in milliseconds (3 seconds)
       const totalDuration = 3000;
 
+      // Create a function to start the counters
       const startCounters = () => {
         counters.forEach((counter) => {
           const target = parseInt(counter.getAttribute("data-target"));
@@ -395,17 +494,22 @@
         });
       };
 
+      // Create an intersection observer to watch the counter container
       const observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
+              // Start the counters when the counter container is visible
               startCounters();
             }
           });
         },
         { threshold: 0.5 }
-      );
+      ); // Adjust the threshold as needed
 
+      // Observe the counter container
+      observer.observe(counterContainer);
+      // Observe the counter container
       observer.observe(counterContainer);
 
       const navElement = document.getElementById("belated-sticky");
@@ -414,13 +518,32 @@
         const scrollPosition =
           window.scrollY || document.documentElement.scrollTop;
 
-        if (scrollPosition > 65) {
+        if (scrollPosition > 55) {
           navElement.classList.add("sticky");
         } else {
           navElement.classList.remove("sticky");
         }
       }
       window.addEventListener("scroll", toggleHiddenClass);
+      document.addEventListener("DOMContentLoaded", function () {
+        // Get all links inside the offcanvas
+        const offcanvasLinks = document.querySelectorAll(
+          ".offcanvas-body .href"
+        );
+
+        // Add event listener to each link
+        offcanvasLinks.forEach(function (link) {
+          link.addEventListener("click", function () {
+            // Get the offcanvas element
+            const offcanvas = document.querySelector(".offcanvas-end");
+
+            // Use Bootstrap's offcanvas JavaScript method to hide the offcanvas
+            const offcanvasInstance =
+              bootstrap.Offcanvas.getInstance(offcanvas);
+            offcanvasInstance.hide();
+          });
+        });
+      });
     </script>
   </body>
 </html>
