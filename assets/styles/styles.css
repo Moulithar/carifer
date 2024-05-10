@@ -1,35 +1,4 @@
-.main-bg {
-  background: linear-gradient(90deg, #ed1f5d 0, #f8ae56);
-  /* background: linear-gradient(90deg, #f55f8d 0, #f8ae56); */
-}
-
-.carifer-nav {
-  position: sticky;
-  top: 0px;
-  z-index: 9999;
-}
-.sticky {
-  position: sticky;
-  top: 0px;
-  z-index: 999999;
-}
-
-.header {
-  border-bottom: 2px solid #fff;
-  position: relative;
-  z-index: 9999;
-}
-.banner-img {
-  border-radius: 50%;
-  position: absolute;
-  border-radius: 50%;
-  top: -100%;
-  right: -5%;
-  width: 700px;
-  height: 700px;
-  z-index: 1;
-  opacity: 0.7;
-}
+/* navbar */
 .icon-container {
   background-color: #fff;
   display: flex;
@@ -42,32 +11,58 @@
   height: 30px;
   border-radius: 50%;
 }
+
 .icon-container:hover {
   color: #fff;
   background: linear-gradient(90deg, #ed1f5d 0, #f8ae56);
 }
+
 .icon-container:hover a i {
   color: #fff !important;
 }
+
+.carifer-nav {
+  z-index: 9999;
+}
+
+.sticky {
+  position: sticky;
+  top: 0px;
+  z-index: 999999;
+}
+
+.header {
+  border-bottom: 2px solid #fff;
+  position: relative;
+  z-index: 9999;
+}
+
+.offcanvas-body .menu-links {
+  font-size: 20px;
+  font-weight: 600;
+  color: #ed1f5d;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #000;
+}
+
+.offcanvas-body .menu-links:last-child {
+  border-bottom: 2px solid #000;
+}
+
+.banner-img {
+  border-radius: 50%;
+  position: absolute;
+  border-radius: 50%;
+  top: -100%;
+  right: -5%;
+  width: 700px;
+  height: 700px;
+  z-index: 1;
+  opacity: 0.7;
+}
+
 .hidden {
   opacity: 0;
-}
-
-.large-button {
-  border: 2px solid transparent;
-  background: #fff;
-  transition: all ease 0.3s;
-  font-size: 16;
-  font-weight: 400;
-  padding: 10px 16px;
-  letter-spacing: 3px;
-  transition: all ease 0.5s;
-}
-
-.large-button:hover {
-  border: 2px solid #fff;
-  color: #fff;
-  background: linear-gradient(90deg, #ed1f5d 0, #f8ae56);
 }
 
 .menu-links {
@@ -89,50 +84,7 @@
   width: 100%;
 }
 
-.center {
-  width: 180px;
-  height: 60px;
-  position: absolute;
-}
-
-ul {
-  --icon-space: 1.3em;
-  list-style: none;
-  padding: 0;
-}
-
-li {
-  padding-left: var(--icon-space);
-  font-size: 18px;
-}
-
-li:before {
-  content: "\f058";
-  color: #f55f8d;
-  font-size: 20px;
-  font-family: FontAwesome;
-  display: inline-block;
-  margin-left: calc(var(--icon-space) * -1);
-  width: var(--icon-space);
-  /* margin-bottom: 12px; */
-}
-
-.about-img {
-  border-radius: 0 25px 25px 0;
-  margin-block: 2rem;
-}
-
-.badge {
-  background-color: rgba(245, 95, 141, 0.1);
-  padding: 6px 16px;
-  font-size: 24px;
-  border-radius: 6px;
-  color: #f55f8d;
-  font-family: "Barlow Condensed", sans-serif;
-  letter-spacing: 2px;
-  width: fit-content;
-}
-
+/* about */
 .about-us {
   background-image: url("https://www.falconsqr.com/images/background/bg15.png");
   background-size: contain;
@@ -140,13 +92,19 @@ li:before {
   background-repeat: no-repeat;
 }
 
+.about-img {
+  border-radius: 0 25px 25px 0;
+  margin-block: 2rem;
+}
+
+/* counter */
 .counter-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
   cursor: default;
-  padding: 100px 0px;
+  padding: 0px 0px 100px 0;
   color: #f55f8d;
 }
 
@@ -158,17 +116,20 @@ li:before {
 .counter:hover {
   margin-top: -20px;
 }
+
 .counter h3 {
   padding: 0.5rem 0;
   font-size: 40px;
   font-weight: 800;
   color: #f55f8d;
 }
+
 .counter p {
   padding: 0.5rem 0;
   font-size: 20px;
 }
 
+/* services */
 .service-icon-bg {
   background-image: url(../images/service-icon.png);
   background-size: cover;
@@ -237,35 +198,36 @@ li:before {
   position: relative;
   z-index: 1;
 }
+
 .service-card:hover h5 {
   color: #fff;
 }
+
 .service-card h5 {
   font-weight: 600;
 }
+
 .service-card:hover {
   background: linear-gradient(90deg, #f55f8d 0, #f8ae56);
 }
 
+/* footer */
 footer {
-  /* background-color: #0e1b1f; */
+  background-color: #0e1b1f;
   color: #fff;
-  background-image: url("https://www.falconsqr.com/images/background/bg4.png"),
-    black;
-  background-color: black;
-  background-blend-mode: multiply;
 }
 
-/* footer::after {
+footer::after {
   content: "";
   background-image: url("https://www.falconsqr.com/images/background/bg4.png");
-  background-position: 0 0;
+  background-position: center;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-} */
+}
+
 footer h3 {
   padding-top: 50px;
   padding-bottom: 10px;
@@ -274,6 +236,7 @@ footer h3 {
   color: #fff;
   position: relative;
 }
+
 footer h3:before {
   content: "";
   position: absolute;
@@ -284,6 +247,7 @@ footer h3:before {
   background-color: #fff;
   width: 15px;
 }
+
 footer h3:after {
   content: "";
   position: absolute;
@@ -306,9 +270,11 @@ footer li:before {
   margin-bottom: 16px;
   transition: all ease 0.3s;
 }
+
 footer li:hover:before {
   margin-right: 7px;
 }
+
 footer li {
   color: #fff;
   font-size: 14px;
@@ -323,35 +289,7 @@ footer p {
   transition: all ease 0.3s;
   cursor: pointer;
 }
+
 footer p:hover {
   margin-left: 20px;
-}
-
-.logo {
-  font-weight: 600;
-  letter-spacing: 3px;
-  font-family: "Orbitron", sans-serif;
-  /* font-family: "Lalezar", system-ui; */
-}
-
-.logo span {
-  /* font-family: "Lalezar", system-ui; */
-  font-family: "Orbitron", sans-serif;
-
-  color: #000;
-  /* font-family: "Press Start 2P", system-ui; */
-  font-weight: 900;
-}
-
-.offcanvas-body .menu-links {
-  font-size: 20px;
-  font-weight: 600;
-  color: #ed1f5d;
-  margin-bottom: 20px;
-  border-bottom: 2px solid #000;
-}
-
-.offcanvas-body .menu-links:last-child {
-  /* border-bottom: none; */
-  border-bottom: 2px solid #000;
 }
