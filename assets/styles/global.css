@@ -96,6 +96,8 @@ li:before {
   font-family: "Orbitron", sans-serif;
   font-weight: 600;
   letter-spacing: 3px;
+  position: relative;
+  z-index: 99;
 }
 
 .logo span {
