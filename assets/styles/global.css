@@ -33,20 +33,18 @@ p {
 
 /* button */
 .large-button {
-  border: 2px solid transparent;
-  background: #fff;
-  transition: all ease 0.3s;
-  font-size: 16;
-  font-weight: 400;
-  padding: 10px 16px;
-  letter-spacing: 3px;
   transition: all ease 0.5s;
   position: relative;
   z-index: 9999;
+  background: #fff;
+  color: #ed1f5d;
+  border-radius: 20px;
+  border: 1px solid #fff;
+  padding: 6px 24px;
+  font-weight: 600;
 }
 
 .large-button:hover {
-  border: 2px solid #fff;
   color: #fff;
   background: linear-gradient(90deg, #ed1f5d 0, #f8ae56);
 }
