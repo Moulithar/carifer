@@ -68,6 +68,9 @@ document
   .addEventListener("submit", function (event) {
     event.preventDefault();
 
+    const submitButton = document.getElementById("submitButton");
+    submitButton.disabled = true;
+    submitButton.textContent = "Submitting...";
     const formData = new FormData(this);
 
     const jsonData = {};
@@ -90,11 +93,16 @@ document
       })
       .then((data) => {
         console.log("API response:", data);
-        alert("Message sent successfully!");
         this.reset();
+
+        alert("Message sent successfully!");
+        submitButton.textContent = "Submit";
+        submitButton.disabled = false;
       })
       .catch((error) => {
         console.error("Error sending message:", error);
         alert("Error sending message. Please try again later.");
+        submitButton.textContent = "Submit";
+        submitButton.disabled = false;
       });
   });
