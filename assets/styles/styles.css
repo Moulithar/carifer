@@ -28,25 +28,21 @@
 .sticky {
   position: sticky;
   top: 0px;
-  z-index: 999999;
+  z-index: 9999;
 }
 
 .header {
   border-bottom: 2px solid #fff;
   position: relative;
-  z-index: 9999;
+  z-index: 99;
 }
 
-.offcanvas-body .menu-links {
-  font-size: 20px;
+.offcanvas-body .menu-items {
+  font-size: 14px;
   font-weight: 600;
-  color: #ed1f5d;
-  margin-bottom: 20px;
-  border-bottom: 2px solid #000;
-}
-
-.offcanvas-body .menu-links:last-child {
-  border-bottom: 2px solid #000;
+  margin-bottom: 25px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ffffff;
 }
 
 .banner-img {
@@ -104,7 +100,7 @@
   justify-content: space-around;
   align-items: center;
   cursor: default;
-  padding: 0px 0px 100px 0;
+  padding: 100px 0px 100px 0;
   color: #f55f8d;
 }
 
@@ -211,10 +207,170 @@
   background: linear-gradient(90deg, #f55f8d 0, #f8ae56);
 }
 
-/* footer */
+/* products */
+.product-icon-bg {
+  background-image: url(../images/product-icon.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.product-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8ae5633;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+.product-card:hover .product-icon-container {
+  background-color: #f6d5dfa7;
+}
+.product-icon-bg .fa-solid {
+  color: #f55f8d;
+}
+.product-card:hover .fa-solid {
+  color: #fff;
+}
+
+.product-card {
+  box-shadow: 0 0 10px 4px rgba(31, 66, 135, 0.1);
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  transition: all ease 0.5s;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  color: #000;
+}
+
+.product-card::after {
+  content: "";
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  background-color: #ed1f5d;
+  position: absolute;
+  bottom: -35%;
+  right: -35%;
+  transform: translate(50%, 50%);
+  outline: 60px solid #feca8b;
+  border: 60px solid #f8ae56;
+  opacity: 0.75;
+  transition: all ease 0.5s;
+  z-index: 0;
+}
+.product-card:hover::after {
+  right: 0%;
+  bottom: 0%;
+}
+
+.product-card .fa-solid {
+  color: #f55f8d;
+}
+.product-card:hover p {
+  color: #fff;
+  position: relative;
+  z-index: 1;
+}
+
+.product-card:hover h5 {
+  color: #fff;
+}
+
+.product-card h5 {
+  font-weight: 600;
+  color: #f55f8d;
+}
+
+.product-card:hover {
+  background: linear-gradient(90deg, #f55f8d 0, #f8ae56);
+}
+/* contact */
+.bottom-curve {
+  margin-top: 50px;
+  position: relative;
+  z-index: 999;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url("https://www.falconsqr.com/_next/static/media/pattern2.3c1febfb03996101998e66405eef0607.png");
+}
+/* .contact {
+  background-color: red;
+} */
+
+textarea:hover {
+  border: 1px solid #f55f8d;
+}
+.contact-form {
+  background-image: url("https://www.falconsqr.com/_next/static/media/pattern3.13b54389f91d8b7f8280d082d161f972.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 20px;
+  box-shadow: 0 0 10px 4px rgba(31, 66, 135, 0.1);
+  padding: 40px;
+  background-color: rgb(255, 255, 255);
+}
+.contact-form input {
+  border-radius: 20px;
+  border: 1px solid transparent;
+  margin-bottom: 10px;
+  width: 100%;
+  box-shadow: 0 0 10px 4px rgba(31, 66, 135, 0.1);
+  height: 45px;
+  border-radius: 1.5rem;
+  padding: 10px 20px;
+  position: relative;
+  font-size: 15px;
+  outline: none;
+}
+.contact-form input:focus,
+.contact-form input:active {
+  border: 1px solid #f55f8d !important;
+  outline: none;
+}
+
+.contact-form textarea {
+  border-radius: 20px;
+  border: none;
+  width: 100%;
+  box-shadow: 0 0 10px 4px rgba(31, 66, 135, 0.1);
+  border-radius: 1.5rem !important;
+  padding: 10px 20px;
+  position: relative;
+  font-size: 15px;
+  resize: none;
+  overflow: hidden;
+  margin-bottom: 10px;
+  border: 1px solid transparent;
+  outline: none;
+}
+
+.contact-form textarea:focus,
+.contact-form textarea:active {
+  border: 1px solid #f55f8d !important;
+  outline: none;
+}
+.rounded-button {
+  background: linear-gradient(90deg, #f55f8d 0, #f8ae56);
+  color: #fff;
+  border-radius: 20px;
+  border: none;
+  padding: 6px 24px;
+  font-weight: 600;
+}
+
 footer {
   background-color: #0e1b1f;
   color: #fff;
+  position: relative;
 }
 
 footer::after {
@@ -226,6 +382,7 @@ footer::after {
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: 1;
 }
 
 footer h3 {
@@ -280,6 +437,12 @@ footer li {
   font-size: 14px;
   margin-bottom: 16px;
   cursor: pointer;
+  position: relative;
+  z-index: 99;
+}
+footer a {
+  position: relative;
+  z-index: 99;
 }
 
 footer p {

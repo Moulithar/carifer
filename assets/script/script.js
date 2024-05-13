@@ -62,3 +62,39 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+document
+  .getElementById("contactForm")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const formData = new FormData(this);
+
+    const jsonData = {};
+    formData.forEach((value, key) => {
+      jsonData[key] = value;
+    });
+
+    fetch("https://jsonplaceholder.typicode.com/posts", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(jsonData),
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        console.log("API response:", data);
+        alert("Message sent successfully!");
+        this.reset();
+      })
+      .catch((error) => {
+        console.error("Error sending message:", error);
+        alert("Error sending message. Please try again later.");
+      });
+  });

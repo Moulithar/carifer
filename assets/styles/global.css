@@ -66,19 +66,23 @@ ul {
 
 li {
   padding-left: var(--icon-space);
-  font-size: 18px;
+  font-size: 16px;
 }
 
 li:before {
   content: "\f058";
   color: #f55f8d;
-  font-size: 20px;
+  font-size: 16px;
   font-family: FontAwesome;
   display: inline-block;
   margin-left: calc(var(--icon-space) * -1);
   width: var(--icon-space);
 }
 
+::selection {
+  /* color: #ffffff;  */
+  background-color: #f55f8d; /* Background color when text is selected */
+}
 /* badge */
 .badge {
   background-color: rgba(245, 95, 141, 0.1);
