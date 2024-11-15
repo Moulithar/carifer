@@ -45,7 +45,7 @@ p {
 }
 
 .large-button:hover {
-  color: #fff;
+  color: #ffffff;
   background: linear-gradient(90deg, #ed1f5d 0, #f8ae56);
 }
 
@@ -108,4 +108,8 @@ li:before {
   font-family: "Orbitron", sans-serif;
   color: #000;
   font-weight: 900;
+}
+
+.mouli-130298 {
+  background-color: red;
 }
